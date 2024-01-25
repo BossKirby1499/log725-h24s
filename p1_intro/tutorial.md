@@ -58,7 +58,6 @@ tableSprite = pygame.image.load("images/table.png")
 
 while True:
   gererFermeture()
-
   ecran.blit(tableSprite, (0, 0))
   pygame.display.flip()
 ```

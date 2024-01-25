@@ -1,6 +1,7 @@
 import pygame
 import sys
 import os
+from src.cercle import Cercle
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -10,8 +11,8 @@ HEIGHT = 480
 
 pygame.init()
 ecran = pygame.display.set_mode((WIDTH, HEIGHT))
-tableSprite = pygame.image.load("images/table.png")
-squareSprite = pygame.image.load("images/square.png")
+piano = pygame.mixer.Sound("sons/piano.mp3")
+cercle = Cercle((255,0,0))
 
 def gererFermeture():
     for event in pygame.event.get():
@@ -21,15 +22,13 @@ def gererFermeture():
 
 while True:
     gererFermeture()
-
-    # voir la resolution de la fenêtre
-    ecran.blit(tableSprite, (0, 0))
-    pygame.draw.rect(ecran, (0, 0, 255), (0,0,100,100))
-    pygame.draw.circle(ecran, (255, 0, 0), (50, 50), 10)
-
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_SPACE]:
-        ecran.blit(squareSprite, (250, 250))
-
+    ecran.fill((0, 0, 0))
+    cercle.verifierX(ecran)
     pygame.display.flip()
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_z]:
+        piano.play()
+    
+
 
