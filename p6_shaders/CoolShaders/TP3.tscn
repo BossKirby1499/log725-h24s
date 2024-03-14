@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://88juist476x0"]
+
+[ext_resource type="PackedScene" uid="uid://c8ajiyp4ta7m7" path="res://goutte_exercice1.tscn" id="1_h7uxf"]
+[ext_resource type="PackedScene" uid="uid://dxfe5epdkduk5" path="res://goutte_exercice2.tscn" id="2_bj72l"]
+[ext_resource type="PackedScene" uid="uid://j7ymx27238r" path="res://goutte_exercice3.tscn" id="3_dy5ay"]
+[ext_resource type="PackedScene" uid="uid://c17u3qr8agufh" path="res://goutte_exercice4.tscn" id="4_5frod"]
+[ext_resource type="PackedScene" uid="uid://b4lmmpq7y6m7r" path="res://goutte_exercice5.tscn" id="5_8rmsu"]
+
+[node name="Tp3" type="Node2D"]
+
+[node name="Exercice1" parent="." instance=ExtResource("1_h7uxf")]
+
+[node name="Exercice2" parent="." instance=ExtResource("2_bj72l")]
+position = Vector2(306, -11)
+
+[node name="Exercice3" parent="." instance=ExtResource("3_dy5ay")]
+position = Vector2(660, -5)
+
+[node name="Exercice4" parent="." instance=ExtResource("4_5frod")]
+position = Vector2(-5, 292)
+
+[node name="Exercice5" parent="." instance=ExtResource("5_8rmsu")]
+position = Vector2(323, 290)
